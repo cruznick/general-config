@@ -1,0 +1,37 @@
+[includeIf "gitdir:~/repos/personal/"]
+path = ~/repos/personal/.gitconfig-personal
+
+[includeIf "gitdir:~/repos/work/"]
+path = ~/repos/work/.gitconfig-work
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+  helper = osxkeychain
+  useHttpPath = true
+[pull]
+	rebase = true
+[alias]
+	permission-reset = !git diff -p -R --no-ext-diff --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+	p =  !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+	st = status -sb
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	cm = commit -v -m
+	gl = config --global -l
+	up = !git fetch --all --prune && git rebase
+	mr = !glab mr create --yes --push --remove-source-branch
+	mrd= !glab mr update --draft
+	mrr= !glab mr update --ready
+	df= diff
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[gpg]
+	program = gpg
+[diff]
+	external = difft
