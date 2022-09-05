@@ -23,9 +23,10 @@ path = ~/repos/work/.gitconfig-work
 	cm = commit -v -m
 	gl = config --global -l
 	up = !git fetch --all --prune && git rebase
-	mr = !glab mr create --yes --push --remove-source-branch
-	mrd= !glab mr update --draft
-	mrr= !glab mr update --ready
+	gl-mr = !glab mr create --yes --push --remove-source-branch
+	gl-mrd= !glab mr update --draft
+	gl-mrr= !glab mr update --ready
+	gh-mr = !gh pr create 
 	df= diff
 [commit]
 	gpgsign = true
