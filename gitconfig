@@ -1,8 +1,11 @@
 [includeIf "gitdir:~/repos/personal/"]
 path = ~/repos/personal/.gitconfig-personal
 
-[includeIf "gitdir:~/repos/work/"]
-path = ~/repos/work/.gitconfig-work
+[includeIf "gitdir:~/repos/work/gh/"]
+path = ~/repos/work/gh/.gitconfig-work-gh
+
+[includeIf "gitdir:~/repos/work/gl/"]
+path = ~/repos/work/gl/.gitconfig-work-gl
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
