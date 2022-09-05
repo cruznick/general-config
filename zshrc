@@ -1,3 +1,4 @@
+
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
@@ -79,8 +80,6 @@ alias md='mkdir -p'
 alias rd=rmdir
 alias d='dirs -v'
 
-alias zshedit='vsc ~/.zshrc'
-
 # mkdir & cd to it
 function mcd() {
   mkdir -p "$1" && cd "$1";
@@ -93,6 +92,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #** here we add work specific config
+
+source /Users/benjaminmartinez/repos/work/gh/kavak-config/extended-zsh
+#---
 
 eval "$(direnv hook zsh)"
 eval "$(sheldon source)"
