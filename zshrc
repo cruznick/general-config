@@ -6,8 +6,13 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+#* Sheldon
+export SHELDON_CONFIG_DIR="$HOME/.sheldon"
+export SHELDON_DATA_DIR="$HOME/.sheldon"
+
 export ZSH="$HOME/.sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 export NVM_SYMLINK_CURRENT=true
+
 
 #* Oh My Zsh settings here
 
@@ -91,9 +96,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
 #** here we add work specific config
 
 source /Users/benjaminmartinez/repos/work/gh/kavak-config/extended-zsh
+export PATH="$PATH:/Users/benjaminmartinez/.kavak/bin"
 #---
 
 eval "$(direnv hook zsh)"
@@ -101,3 +108,12 @@ eval "$(sheldon source)"
 #* prompt
 eval "$(starship init zsh)"
 
+
+
+# ================== KAVAK RELATED CONFIGURATIONS - BEGIN ========================
+
+# Update path to include the directory where our kavak binary resides
+
+export PATH="$PATH:/Users/benjaminmartinez/.kavak/bin";
+
+# ================== KAVAK RELATED CONFIGURATIONS - END   ========================

@@ -29,7 +29,7 @@ path = ~/repos/work/gl/.gitconfig-gl
 	gl-mr = !glab mr create --yes --push --remove-source-branch
 	gl-mrd= !glab mr update --draft
 	gl-mrr= !glab mr update --ready
-	gh-mr = !gh pr create 
+	gh-mr = !gh pr create
 	df= diff
 [commit]
 	gpgsign = true
@@ -39,3 +39,5 @@ path = ~/repos/work/gl/.gitconfig-gl
 	program = gpg
 [diff]
 	external = difft
+[core]
+	excludesfile = ~/.gitignore
