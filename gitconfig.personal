@@ -1,0 +1,11 @@
+[user]
+  email = benjaminjmtz@gmail.com
+  name = Benjamin J. Martinez
+  signingkey = 8E0AA33D
+
+
+[github]
+  user = "cruznick"
+
+[core]
+  sshCommand = ssh -i ~/.ssh/GhPersonal
